@@ -26,7 +26,7 @@ def move(board, user_index, a_value = "X")
 end
 
 def valid_move?(board, index)
-  if position_taken? == false || index.between?(0,8) == true
+  if position_taken?(board, index) == false || index.between?(0,8) == true
     return true
   else
     return false
