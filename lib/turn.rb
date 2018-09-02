@@ -7,11 +7,14 @@ def display_board(board)
 end
 
 def turn(board)
+  loop do
     puts "Please enter 1-9:"
     user_input = gets.strip
     user_index = input_to_index(user_input)
     a_value = "X"
-    valid_move?(board, user_index)
+    if valid_move?(board, user_index) == true
+      break
+    end
     move(board, user_index, a_value)
     display_board(board)
 end
