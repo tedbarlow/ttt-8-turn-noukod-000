@@ -17,6 +17,7 @@ def turn(board)
     end
     move(board, user_index, a_value)
     display_board(board)
+  end
 end
 
 # code your input_to_index and move method here!
