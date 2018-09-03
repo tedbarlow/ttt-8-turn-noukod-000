@@ -11,15 +11,15 @@ def turn(board)
   user_input = gets.strip
   user_index = input_to_index(user_input)
   valid_move?(board, user_index)
-    until valid_move?(board, user_index) == true
-      puts "Please enter 1-9:"
-      user_input = gets.strip
-      user_index = input_to_index(user_input)
-      valid_move?(board, user_index)
-    end
-    a_value = "X"
-    move(board, user_index, a_value)
-    display_board(board)
+  until valid_move?(board, user_index) == true
+    puts "Please enter 1-9:"
+    user_input = gets.strip
+    user_index = input_to_index(user_input)
+    valid_move?(board, user_index)
+  end
+  a_value = "X"
+  move(board, user_index, a_value)
+  display_board(board)
 end
 
 # code your input_to_index and move method here!
